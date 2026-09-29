@@ -16,13 +16,18 @@ string compRLE(const string& entrada) {
 
     for (int i = 0; i < n; i++) {
         int count = 1;
-        while (i + 1 < n && entrada[i] == entrada[i + 1]) {
+        while (i + 1 < n && entrada[i] == entrada[i + 1]&&count<255) {
             count++;
             i++;
         }
-        salida += to_string(count) + entrada[i];
-        cout << salida << endl;
+        salida += (unsigned char)count;
+        salida+=entrada[i];
+        for (size_t i = 0; i < salida.size(); i += 2) {
+            cout <<(int)(unsigned char)salida[i] << salida[i+1];
+        }
+        cout << endl;
     }
+
     return salida;
 }
 
@@ -33,7 +38,7 @@ string decompRLE(const string& entrada) {
     int n = entrada.size();
 
     for (int i = 0; i < n; i++) {
-        int count = entrada[i] - '0';
+        int count = (unsigned char)entrada[i];
         char c = entrada[++i];
 
         for (int j = 0; j < count; j++)
@@ -44,3 +49,9 @@ string decompRLE(const string& entrada) {
 }
 
 
+void imprimirRLE(const string& salida) {
+    for (size_t j = 0; j < salida.size(); j += 2) {
+        cout << (int)(unsigned char)salida[j] << salida[j + 1];
+    }
+    cout << endl;
+}

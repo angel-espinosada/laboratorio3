@@ -16,7 +16,8 @@ string leerArch(const string& nomArch);
             string decomp = decompRLE(comp);
 
             cout << "Original: " << texto << endl;
-            cout << "RLE: " << comp << endl;
+            cout << "RLE: ";
+            imprimirRLE(comp);
             cout << "Recuperado: " << decomp << endl;
  } catch (exception& e) {
         cout << "Error: " << e.what() << endl;
