@@ -25,6 +25,7 @@ string leerArch(const string& nomArch);
     return 0;
 
 
+
 }
     string leerArch(const string& nomArch) {
         ifstream file(nomArch);

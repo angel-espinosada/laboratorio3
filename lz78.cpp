@@ -1,6 +1,6 @@
 #include "lz78.h"
 #include <fstream>
-#include <string>
+
 #include <iostream>
 
 using namespace std;

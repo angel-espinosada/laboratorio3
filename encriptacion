@@ -1,0 +1,7 @@
+#ifndef ENCRIPTACION
+#define ENCRIPTACION
+#include <string>
+unsigned char rotarIzquierda(unsigned char byte, int n);
+unsigned char rotarDerecha(unsigned char byte, int n);
+string encriptar(const string& datos, int n, unsigned char claveK);
+#endif // ENCRIPTACION
