@@ -19,9 +19,12 @@ string leerArch(const string& nomArch);
             cout << "RLE: ";
             imprimirRLE(comp);
             cout << "Recuperado: " << decomp << endl;
+            // ---- LZ78 ----
+            compLZ78(texto.c_str(), texto.size());
  } catch (exception& e) {
         cout << "Error: " << e.what() << endl;
     }
+ system("pause");
     return 0;
 
 
